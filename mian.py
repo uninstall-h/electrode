@@ -79,7 +79,7 @@ if __name__ == '__main__':
         elp_rate = area_elp / float(fit_area_elp)
         out_rate = area_out / float(fit_area_outer)
         area_list[idx] = [fit_area_cyl, area_cyl, cyl_rate,
-                          fit_area_elp,  area_elp, elp_rate,
+                          fit_area_elp, area_elp, elp_rate,
                           fit_area_outer, area_out, out_rate
                           ]
 
@@ -87,5 +87,3 @@ if __name__ == '__main__':
     # print(idx_list)
     print(area_list)
     writeAreaToExcel(area_list)
-
-

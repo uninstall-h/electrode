@@ -3,31 +3,9 @@
 
 import cv2 as cv
 import numpy as np
+from util import area_sort
 
 font = cv.FONT_HERSHEY_SIMPLEX  # 设置字体样式
-
-
-def area_sort(contours):
-    new_cnts = []
-    area_list = []
-    for cnt in contours:
-        area = cv.contourArea(cnt)
-        if area > 10:
-            new_cnts.append(cnt)
-            area_list.append(area)
-    # space = np.ones([r, c], np.uint8) * 255
-    # print(space)
-    #
-    # cv2.imshow('space', space)
-
-    n = len(new_cnts)
-    for j in range(0, n - 1):
-        for i in range(0, n - 1 - j):
-            if area_list[i] < area_list[i + 1]:
-                new_cnts[i], new_cnts[i + 1] = new_cnts[i + 1], new_cnts[i]
-                area_list[i], area_list[i + 1] = area_list[i + 1], area_list[i]
-
-    return new_cnts
 
 def fitCircle(src):
     img = src.copy()
@@ -47,6 +25,7 @@ def fitCircle(src):
     # cv.putText(img, text2, (10, 60), font, 0.5, (0, 255, 0), 1, cv.LINE_AA, 0)
 
     return img, mask
+
 
 def fitEllipse(src):
     img = src.copy()
