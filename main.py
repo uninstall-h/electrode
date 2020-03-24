@@ -18,7 +18,7 @@ def get_img_list(path):
 
 
 if __name__ == '__main__':
-    img_path = get_img_list("./img/first/")
+    img_path = get_img_list("./imgs/first/")
     # print(img_path)
     area_list = {}
     # idx_list = []

@@ -21,8 +21,8 @@ def fitCircle(src):
     cv.circle(mask, center, radius, 1, -1)
     # text1 = 'Center: (' + str(int(x)) + ', ' + str(int(y)) + ') '
     # text2 = 'Diameter: ' + str(2 * radius)
-    # cv.putText(img, text1, (10, 30), font, 0.5, (0, 255, 0), 1, cv.LINE_AA, 0)
-    # cv.putText(img, text2, (10, 60), font, 0.5, (0, 255, 0), 1, cv.LINE_AA, 0)
+    # cv.putText(imgs, text1, (10, 30), font, 0.5, (0, 255, 0), 1, cv.LINE_AA, 0)
+    # cv.putText(imgs, text2, (10, 60), font, 0.5, (0, 255, 0), 1, cv.LINE_AA, 0)
 
     return img, mask
 
@@ -39,9 +39,9 @@ def fitEllipse(src):
     # text1 = 'x: ' + str(int(x)) + ' y: ' + str(int(y))
     # text2 = 'a:  ' + str(int(a)) + ' b:  ' + str(int(b))
     # text3 = 'angle: ' + str(round(angle, 2))
-    # cv.putText(img, text1, (10, 30), font, 0.5, (0, 255, 0), 1, cv.LINE_AA, 0)
-    # cv.putText(img, text2, (10, 60), font, 0.5, (0, 255, 0), 1, cv.LINE_AA, 0)
-    # cv.putText(img, text3, (10, 90), font, 0.5, (0, 255, 0), 1, cv.LINE_AA, 0)
+    # cv.putText(imgs, text1, (10, 30), font, 0.5, (0, 255, 0), 1, cv.LINE_AA, 0)
+    # cv.putText(imgs, text2, (10, 60), font, 0.5, (0, 255, 0), 1, cv.LINE_AA, 0)
+    # cv.putText(imgs, text3, (10, 90), font, 0.5, (0, 255, 0), 1, cv.LINE_AA, 0)
     # print(mask.max(), mask.min())
     return img, mask
 
